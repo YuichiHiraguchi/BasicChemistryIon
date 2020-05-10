@@ -20,7 +20,7 @@
          else {
           let min1=Math.floor(sec/60);
           let sec1=sec-min1*60;
-          if (min1>=10) {
+          if (min1>=10000) {
             jikan.textContent="終了";
             //nyuryoku.readOnly=true;
           }else {
