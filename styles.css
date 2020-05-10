@@ -68,6 +68,7 @@ ul.nyuuryoku{
   padding: 0;
   list-style-type: none;
   display: flex;
+  width:500px;
 }
 li.nyuuryoku{
   text-align: center;
