@@ -98,4 +98,28 @@
   document.getElementById("clear").onclick=function(){
     hyouji.innerHTML="";
   }
+  
+  tuujyou.addEventListener('change',function(){
+    let hyouji=document.getElementById("hyouji");
+    let tuujyou=document.getElementById('tuujyou').value;
+    let newhyouji=hyouji.innerHTML + tuujyou;
+    hyouji.innerHTML=newhyouji;
+    document.getElementById('tuujyou').value="";
+  })
+
+  ue.addEventListener('change',function(){
+    let hyouji=document.getElementById("hyouji");
+    let ue=document.getElementById('ue').value;
+    let newhyouji=hyouji.innerHTML + ue.sup();
+    hyouji.innerHTML=newhyouji;
+    document.getElementById('ue').value="";
+  })
+
+  sita.addEventListener('change',function(){
+    let hyouji=document.getElementById("hyouji");
+    let sita=document.getElementById('sita').value;
+    let newhyouji=hyouji.innerHTML + sita.sub();
+    hyouji.innerHTML=newhyouji;
+    document.getElementById('sita').value="";
+  })
 }
