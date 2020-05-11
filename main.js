@@ -124,7 +124,7 @@
   })
   
   function hankaku2Zenkaku(str) {
-    return str.replace(/[Ａ-Ｚａ-ｚ０-９！＂＃＄％＆＇（）＊＋，－．／：；＜＝＞？＠［＼］＾＿｀｛｜｝]/g, function(s) {
+    return str.replace(/[Ａ-Ｚａ-ｚ０-９！＂＃＄％＆＇（）＊＋，ー．／：；＜＝＞？＠［＼］＾＿｀｛｜｝]/g, function(s) {
         return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
     });
 }
