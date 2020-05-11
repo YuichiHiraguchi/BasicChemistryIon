@@ -103,7 +103,7 @@
     let hyouji=document.getElementById("hyouji");
     let tuujyou=document.getElementById('tuujyou').value;
     let newhyouji=hyouji.innerHTML + tuujyou;
-    hyouji.innerHTML=newhyouji;
+    hyouji.innerHTML=hankaku2Zenkaku(newhyouji);
     document.getElementById('tuujyou').value="";
   })
 
@@ -111,7 +111,7 @@
     let hyouji=document.getElementById("hyouji");
     let ue=document.getElementById('ue').value;
     let newhyouji=hyouji.innerHTML + ue.sup();
-    hyouji.innerHTML=newhyouji;
+    hyouji.innerHTML=hankaku2Zenkaku(newhyouji);
     document.getElementById('ue').value="";
   })
 
@@ -119,7 +119,13 @@
     let hyouji=document.getElementById("hyouji");
     let sita=document.getElementById('sita').value;
     let newhyouji=hyouji.innerHTML + sita.sub();
-    hyouji.innerHTML=newhyouji;
+    hyouji.innerHTML=hankaku2Zenkaku(newhyouji);
     document.getElementById('sita').value="";
   })
+  
+  function hankaku2Zenkaku(str) {
+    return str.replace(/[Ａ-Ｚａ-ｚ０-９！＂＃＄％＆＇（）＊＋，－．／：；＜＝＞？＠［＼］＾＿｀｛｜｝]/g, function(s) {
+        return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+    });
+}
 }
