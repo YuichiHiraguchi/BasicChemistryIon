@@ -1,6 +1,5 @@
 'use strict';
 
-{
   const btn1=document.getElementById('btn1');
   const btn2=document.getElementById('btn2');
   const kotae=document.getElementById('kotae');
@@ -20,7 +19,7 @@
          else {
           let min1=Math.floor(sec/60);
           let sec1=sec-min1*60;
-          if (min1>=10000) {
+          if (min1>=10) {
             jikan.textContent="終了";
             //nyuryoku.readOnly=true;
           }else {
@@ -32,7 +31,7 @@
   btn1.addEventListener('click',()=>{
       let mondai=['H<sup>+</sup>','Li<sup>+</sup>','Na<sup>+</sup>','K<sup>+</sup>','Ag<sup>+</sup>','Cu<sup>+</sup>','NH<sub>4</sub><sup>+</sup>','H<sub>3</sub>O<sup>+</sup>','Mg<sup>2+</sup>','Ca<sup>2+</sup>','Ba<sup>2+</sup>','Zn<sup>2+</sup>','Fe<sup>2+</sup>','Cu<sup>2+</sup>','Al<sup>3+</sup>','Fe<sup>3+</sup>','F<sup>-</sup>','Cl<sup>-</sup>','Br<sup>-</sup>','I<sup>-</sup>','OH<sup>-</sup>','NO<sub>3</sub><sup>-</sup>','CH<sub>3</sub>COO<sup>-</sup>','O<sup>2-</sup>','S<sup>2-</sup>','SO<sub>4</sub><sup>2-</sup>','CO<sub>3</sub><sup>2-</sup>','PO<sub>4</sub><sup>3-</sup>','水素イオン','リチウムイオン','ナトリウムイオン','カリウムイオン','銀イオン','銅(Ⅰ)イオン','アンモニウムイオン','オキソニウムイオン','マグネシウムイオン','カルシウムイオン','バリウムイオン','亜鉛イオン','鉄(Ⅱ)イオン','銅(Ⅱ)イオン','アルミニウムイオン','鉄(Ⅲ)イオン','フッ化物イオン','塩化物イオン','臭化物イオン','ヨウ化物イオン','水酸化物イオン','硝酸イオン','酢酸イオン','酸化物イオン','硫化物イオン','硫酸イオン','炭酸イオン','リン酸イオン','HCO<sub>3</sub><sup>-</sup>','Pb<sup>2+</sup>','Pb<sup>4+</sup>','炭酸水素イオン','鉛(Ⅱ)イオン','鉛(Ⅳ)イオン']
 
-      let results=['水素イオン','リチウムイオン','ナトリウムイオン','カリウムイオン','銀イオン','銅(Ⅰ)イオン','アンモニウムイオン','オキソニウムイオン','マグネシウムイオン','カルシウムイオン','バリウムイオン','亜鉛イオン','鉄(Ⅱ)イオン','銅(Ⅱ)イオン','アルミニウムイオン','鉄(Ⅲ)イオン','フッ化物イオン','塩化物イオン','臭化物イオン','ヨウ化物イオン','水酸化物イオン','硝酸イオン','酢酸イオン','酸化物イオン','硫化物イオン','硫酸イオン','炭酸イオン','リン酸イオン','H<sup>+</sup>','Li<sup>+</sup>','Na<sup>+</sup>','K<sup>+</sup>','Ag<sup>+</sup>','Cu<sup>+</sup>','NH<sub>4</sub><sup>+</sup>','H<sub>3</sub>O<sup>+</sup>','Mg<sup>2+</sup>','Ca<sup>2+</sup>','Ba<sup>2+</sup>','Zn<sup>2+</sup>','Fe<sup>2+</sup>','Cu<sup>2+</sup>','Al<sup>3+</sup>','Fe<sup>3+</sup>','F<sup>-</sup>','Cl<sup>-</sup>','Br<sup>-</sup>','I<sup>-</sup>','OH<sup>-</sup>','NO<sub>3</sub><sup>-</sup>','CH<sub>3</sub>COO<sup>-</sup>','O<sup>2-</sup>','S<sup>2-</sup>','SO<sub>4</sub><sup>2-</sup>','CO<sub>3</sub><sup>2-</sup>','PO<sub>4</sub><sup>3-</sup>','炭酸水素イオン','鉛(Ⅱ)イオン','鉛(Ⅳ)イオン','HCO<sub>3</sub><sup>-</sup>','Pb<sup>2+</sup>','Pb<sup>4+</sup>']   
+      let results=['水素イオン','リチウムイオン','ナトリウムイオン','カリウムイオン','銀イオン','銅(Ⅰ)イオン','アンモニウムイオン','オキソニウムイオン','マグネシウムイオン','カルシウムイオン','バリウムイオン','亜鉛イオン','鉄(Ⅱ)イオン','銅(Ⅱ)イオン','アルミニウムイオン','鉄(Ⅲ)イオン','フッ化物イオン','塩化物イオン','臭化物イオン','ヨウ化物イオン','水酸化物イオン','硝酸イオン','酢酸イオン','酸化物イオン','硫化物イオン','硫酸イオン','炭酸イオン','リン酸イオン','H<sup>+</sup>','Li<sup>+</sup>','Na<sup>+</sup>','K<sup>+</sup>','Ag<sup>+</sup>','Cu<sup>+</sup>','NH<sub>4</sub><sup>+</sup>','H<sub>3</sub>O<sup>+</sup>','Mg<sup>2+</sup>','Ca<sup>2+</sup>','Ba<sup>2+</sup>','Zn<sup>2+</sup>','Fe<sup>2+</sup>','Cu<sup>2+</sup>','Al<sup>3+</sup>','Fe<sup>3+</sup>','F<sup>-</sup>','Cl<sup>-</sup>','Br<sup>-</sup>','I<sup>-</sup>','OH<sup>-</sup>','NO<sub>3</sub><sup>-</sup>','CH<sub>3</sub>COO<sup>-</sup>','O<sup>2-</sup>','S<sup>2-</sup>','SO<sub>4</sub><sup>2-</sup>','CO<sub>3</sub><sup>2-</sup>','PO<sub>4</sub><sup>3-</sup>','炭酸水素イオン','鉛(Ⅱ)イオン','鉛(Ⅳ)イオン','HCO<sub>3</sub><sup>-</sup>','Pb<sup>2+</sup>','Pb<sup>4+</sup>']
       let n = Math.floor(Math.random()*results.length);
       //nyuryoku.readOnly=false;
       //nyuryoku.value='';
@@ -50,9 +49,13 @@
 
   btn2.addEventListener('click',()=>{
       if (btn2.textContent=="答え合わせ" && jikan.textContent!=="終了") {
-        const nyuryokup=document.getElementById("hyouji");
+        var nyuryokup=document.getElementById("hyouji");
+        //nyuryokup.textContent=nyuryokup.innerHTML;
+        nyuryokup.innerHTML=nyuryokup.innerHTML.replace("</sup><sup>","").replace("</sub><sub>","");
+
         onclick="disabled=true";
         //nyuryoku.readOnly=true
+
         if (kotae.textContent==nyuryokup.innerHTML && nyuryokup.innerHTML!=="") {
           btn2.textContent="正解";
             s=s+1;
@@ -60,6 +63,7 @@
         }else if (nyuryokup.innerHTML!=="") {
           btn2.innerHTML="不正解 : "+kotae.textContent;
         }else {
+
       //    nyuryoku.readOnly=false;
         }
 
@@ -98,7 +102,7 @@
   document.getElementById("clear").onclick=function(){
     hyouji.innerHTML="";
   }
-  
+
   tuujyou.addEventListener('change',function(){
     let hyouji=document.getElementById("hyouji");
     let tuujyou=document.getElementById('tuujyou').value;
@@ -122,10 +126,12 @@
     hyouji.innerHTML=hankaku2Zenkaku(newhyouji);
     document.getElementById('sita').value="";
   })
-  
+
   function hankaku2Zenkaku(str) {
-    return str.replace(/[Ａ-Ｚａ-ｚ０-９！＂＃＄％＆＇（）＊＋，ー．／：；＜＝＞？＠［＼］＾＿｀｛｜｝]/g, function(s) {
+    return str.replace(/[Ａ-Ｚａ-ｚ０-９！＂＃＄％＆＇（）＊＋，－．／：；＜＝＞？＠［＼］＾＿｀｛｜｝]/g, function(s) {
         return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
     });
 }
+
+
 }
